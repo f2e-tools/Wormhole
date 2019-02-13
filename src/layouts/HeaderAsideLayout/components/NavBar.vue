@@ -7,9 +7,6 @@
             <i class="el-icon-search icon"/>
           </span>
           <span class="menu-icon">
-            <i class="el-icon-message icon"/>
-          </span>
-          <span class="menu-icon">
             <el-badge is-dot class="item">
               <i class="el-icon-bell icon"/>
             </el-badge>
@@ -46,8 +43,20 @@ export default {
 
 <style lang="scss" scoped>
 .navbar {
+  position: relative;
   height: 64px;
   box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
+  &::before {
+    content: "Wormhole";
+    position: absolute;
+    width: 100%;
+    height: 64px;
+    line-height: 64px;
+    text-align: center;
+    font-size: 20px;
+    font-family: Courier, Monaco, monospace;
+    font-weight: 600;
+  }
   .user-profile-container {
     position: absolute;
     right: 20px;

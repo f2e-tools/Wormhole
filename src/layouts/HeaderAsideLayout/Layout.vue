@@ -1,6 +1,5 @@
 <template>
   <div class="app-wrapper">
-    <side-bar class="sidebar-container"/>
     <div class="main-container">
       <nav-bar/>
       <app-main/>
@@ -8,13 +7,12 @@
   </div>
 </template>
 <script>
-import { AppMain, NavBar, SideBar } from './components'
+import { AppMain, NavBar } from './components'
 export default {
   name: 'Layout',
   components: {
     AppMain,
-    NavBar,
-    SideBar
+    NavBar
   }
 }
 </script>
@@ -33,7 +31,6 @@ export default {
 .main-container {
   min-height: 100vh;
   transition: margin-left 0.28s;
-  margin-left: 256px;
   background-color: #f0f2f5;
 }
 </style>

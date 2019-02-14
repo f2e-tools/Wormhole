@@ -1,10 +1,10 @@
 <template>
-  <div class="Apple">Apple</div>
+  <div class="Main">Main</div>
 </template>
 <script>
-import {getAppleList} from '../../http/apis/apple'
+import {getMainList} from '../../http/apis/main'
 export default {
-  name: 'Apple',
+  name: 'Main',
   methods: {
     async init () {
       let payload = {
@@ -12,7 +12,7 @@ export default {
         pageNo: 1,
         name: 'a'
       }
-      let res = await getAppleList(payload)
+      let res = await getMainList(payload)
       console.log(res)
     }
   },

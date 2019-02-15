@@ -3,21 +3,21 @@
 import HeaderAsideLayout from './layouts/HeaderAsideLayout'
 import EmptyLayout from './layouts/EmptyLayout'
 // 页面
-import Apple from './views/Apple'
+import Main from './views/Main'
 // 404
 import NotFound from './views/NotFound'
 const routeConfig = [
   {
     path: '/',
     layout: HeaderAsideLayout,
-    component: Apple,
+    component: Main,
     name: 'fruit',
     children: [
       {
-        path: '/fruit/apple',
+        path: '/wormhole/main',
         layout: HeaderAsideLayout,
-        component: Apple,
-        name: 'apple'
+        component: Main,
+        name: 'main'
       }
     ]
   },

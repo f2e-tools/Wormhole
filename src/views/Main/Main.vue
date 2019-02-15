@@ -24,7 +24,6 @@ export default {
 </script>
 <style lang="scss" scoped>
 .Main {
-  margin-top: 20vh;
   text-align: center;
   font-size: 32px;
 }

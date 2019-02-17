@@ -1,0 +1,1 @@
+export { default as AppNotice } from './AppNotice.vue'

@@ -18,7 +18,10 @@
             class="link__item--content"
             :href="linkItem.link"
           >
-            <div class="link__item--preview">{{linkItem.name.slice(0,1) || 'W'}}</div>
+            <div
+              class="link__item--preview"
+              :style="previewStyle()"
+            >{{linkItem.name.slice(0,1).toLocaleUpperCase() || 'W'}}</div>
             <div class="link__item--title">{{linkItem.name}}</div>
           </a>
         </div>
@@ -31,6 +34,18 @@ export default {
   name: 'pannel',
   data () {
     return {
+      colorSet: [
+        '#00a6ac',
+        '#f15a22',
+        '#009ad6',
+        '#145b7d',
+        '#525f42',
+        '#b69968',
+        '#00ae9d',
+        '#ea66a6',
+        '#130c0e',
+        '#444693'
+      ],
       wormhole: [
         {
           id: 1,
@@ -62,6 +77,16 @@ export default {
         }
       ]
     }
+  },
+
+  methods: {
+    previewStyle () {
+      let styleObj = { 'background-color': this.randomColor()}
+      return styleObj
+    },
+    randomColor () {
+      return this.colorSet[Math.round(Math.random() * (this.colorSet.length - 1))]
+    }
   }
 }
 </script>
@@ -69,12 +94,12 @@ export default {
 .pannel {
   margin: 0 auto;
   padding: 0 20px;
-  border-radius: 20px;
+  border-radius: 10px;
   width: 1200px;
   height: auto;
   box-sizing: border-box;
   color: #555;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.3);
 }
 .pannel__item {
   display: flex;

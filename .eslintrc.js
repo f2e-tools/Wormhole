@@ -32,6 +32,8 @@ module.exports = {
     // 有的标签不必严格符合规定，如 <br> 或 <br/> 都应该是合法的
     'vue/html-end-tags': 'off',
     // 构造函数首字母必须大写
-    'new-cap': 'error'
+    'new-cap': 'error',
+    // 禁止使用不带 await 表达式的 async 函数
+    'require-await': 'error'
   }
 }

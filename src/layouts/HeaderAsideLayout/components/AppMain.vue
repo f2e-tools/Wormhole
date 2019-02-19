@@ -1,7 +1,10 @@
 <template>
   <section class="app-main">
-    <transition name="fade" mode="out-in">
-      <router-view/>
+    <transition
+      name="fade"
+      mode="out-in"
+    >
+      <router-view />
     </transition>
   </section>
 </template>

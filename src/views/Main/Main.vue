@@ -1,7 +1,7 @@
 <template>
   <div class="main-container">
     <section class="pannel__wrapper">
-      <Pannel/>
+      <Pannel />
     </section>
   </div>
 </template>

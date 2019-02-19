@@ -1,14 +1,23 @@
 <template>
-  <el-menu class="navbar" mode="horizontal">
-    <div class="user-profile-container" trigger="click">
+  <el-menu
+    class="navbar"
+    mode="horizontal"
+  >
+    <div
+      class="user-profile-container"
+      trigger="click"
+    >
       <div class="user-profile-content">
         <div class="menu-icons">
           <span class="menu-icon">
-            <i class="el-icon-search icon"/>
+            <i class="el-icon-search icon" />
           </span>
           <span class="menu-icon">
-            <el-badge is-dot class="item">
-              <i class="el-icon-bell icon"/>
+            <el-badge
+              is-dot
+              class="item"
+            >
+              <i class="el-icon-bell icon" />
             </el-badge>
           </span>
         </div>
@@ -20,7 +29,10 @@
             >
             <span class="user-name">周嘉炜</span>
           </div>
-          <el-dropdown-menu slot="dropdown" class="user-dropdown">
+          <el-dropdown-menu
+            slot="dropdown"
+            class="user-dropdown"
+          >
             <router-link to="/">
               <el-dropdown-item>我的主页</el-dropdown-item>
             </router-link>

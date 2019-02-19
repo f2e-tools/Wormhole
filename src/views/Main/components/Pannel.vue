@@ -1,12 +1,23 @@
 <template>
   <div class="pannel">
-    <div class="pannel__item" v-for="item in wormhole" v:key="item.id">
+    <div
+      class="pannel__item"
+      v-for="item in wormhole"
+      v:key="item.id"
+    >
       <div class="pannel__item--title">
         <span>{{item.name}}</span>
       </div>
       <div class="pannel__item--links">
-        <div class="link__item" v-for="linkItem in item.child || []" v:key="linkItem.id">
-          <a class="link__item--content" :href="linkItem.link">
+        <div
+          class="link__item"
+          v-for="linkItem in item.child || []"
+          v:key="linkItem.id"
+        >
+          <a
+            class="link__item--content"
+            :href="linkItem.link"
+          >
             <div class="link__item--preview">{{linkItem.name.slice(0,1) || 'W'}}</div>
             <div class="link__item--title">{{linkItem.name}}</div>
           </a>
@@ -73,6 +84,7 @@ export default {
     border-bottom: 1px solid #eee;
   }
   &--title {
+    flex-shrink: 0;
     margin: 0 15px 0 0;
     font-size: 16px;
   }
@@ -87,9 +99,11 @@ export default {
         align-items: center;
         margin-right: 8px;
         padding: 8px;
+        width: 160px;
         font-size: 14px;
       }
       &--preview {
+        flex-shrink: 0;
         border-radius: 50%;
         margin-right: 8px;
         width: 25px;
@@ -99,6 +113,11 @@ export default {
         color: #fff;
         font-weight: 800;
         background-color: #00a6ac;
+      }
+      &--title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
     }
   }

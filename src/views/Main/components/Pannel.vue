@@ -42,62 +42,13 @@
 </template>
 <script>
 import { PopoverContent } from '../../../components'
+import { colorSet } from '../../../data/colorSet'
+import { wormhole } from '../../../data/wormhole'
 export default {
   name: 'pannel',
   data () {
     return {
-      colorSet: [
-        '#00a6ac',
-        '#f15a22',
-        '#009ad6',
-        '#145b7d',
-        '#525f42',
-        '#b69968',
-        '#00ae9d',
-        '#ea66a6',
-        '#130c0e',
-        '#444693'
-      ],
-      wormhole: [
-        {
-          id: 1,
-          name: '前端框架',
-          icon: '',
-          child: [
-            {
-              id: 1,
-              name: 'React',
-              link: 'https://react.docschina.org/',
-              popover: {
-                tags: ['中文','免费','重点'],
-                description: '这是一段文字文字文字文字文字文字文字文字',
-                visible: false
-              }
-
-            }, {
-              id: 2,
-              name: 'Vue',
-              link: 'https://cn.vuejs.org/',
-              popover: {
-                tags: ['中文','免费','重点'],
-                visible: false
-              }
-            }
-          ]
-        },
-        {
-          id: 2,
-          name: 'UI 框架',
-          icon: '',
-          child: [
-            {
-              id: 3,
-              name: 'iView',
-              link: 'hhttp://v1.iviewui.com/'
-            }
-          ]
-        }
-      ]
+      wormhole: []
     }
   },
 
@@ -106,7 +57,7 @@ export default {
   },
 
   created () {
-    this.wormhole = this.dataInit(this.wormhole)
+    this.wormhole = this.dataInit(wormhole)
   },
 
   methods: {
@@ -116,17 +67,16 @@ export default {
      * @return {Object} data
      */
     dataInit (data) {
-      data.map((current) => {
-        if (current.child.length) {
-          current.child.map((_current) => {
-            if (!_current.popover) {
-              _current.popover = {}
+      data.map((ele) => {
+        if (ele.child.length) {
+          ele.child.map((_ele) => {
+            if (!_ele.popover) {
+              _ele.popover = {}
             }
-            _current.popover.visible = false
+            _ele.popover.visible = false
           })
         }
       })
-      console.log(data)
       return data
     },
     previewStyle () {
@@ -134,7 +84,7 @@ export default {
       return styleObj
     },
     randomColor () {
-      return this.colorSet[Math.round(Math.random() * (this.colorSet.length - 1))]
+      return colorSet[Math.round(Math.random() * (colorSet.length - 1))]
     },
     mouseenterEvent (popover) {
       if (popover.tags || popover.description) {

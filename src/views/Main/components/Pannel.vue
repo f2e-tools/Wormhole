@@ -11,25 +11,37 @@
       <div class="pannel__item--links">
         <div
           class="link__item"
-          v-for="linkItem in item.child || []"
+          v-for="(linkItem, index) in item.child || []"
           v:key="linkItem.id"
         >
-          <a
-            class="link__item--content"
-            :href="linkItem.link"
+          <el-popover
+            placement="bottom-start"
+            width="200"
+            trigger="manual"
+            v-model="linkItem.popover.visible"
           >
-            <div
-              class="link__item--preview"
-              :style="previewStyle()"
-            >{{linkItem.name.slice(0,1).toLocaleUpperCase() || 'W'}}</div>
-            <div class="link__item--title">{{linkItem.name}}</div>
-          </a>
+            <popover-content :popoverParams="linkItem.popover" />
+            <a
+              slot="reference"
+              @mouseenter="mouseenterEvent(linkItem.popover)"
+              @mouseleave="mouseleaveEvent(linkItem.popover)"
+              class="link__item--content"
+              :href="linkItem.link"
+            >
+              <div
+                class="link__item--preview"
+                :style="previewStyle()"
+              >{{linkItem.name.slice(0,1).toLocaleUpperCase() || 'W'}}</div>
+              <div class="link__item--title">{{linkItem.name}}</div>
+            </a>
+          </el-popover>
         </div>
       </div>
     </div>
   </div>
 </template>
 <script>
+import { PopoverContent } from '../../../components'
 export default {
   name: 'pannel',
   data () {
@@ -55,11 +67,21 @@ export default {
             {
               id: 1,
               name: 'React',
-              link: 'https://react.docschina.org/'
+              link: 'https://react.docschina.org/',
+              popover: {
+                tags: ['中文','免费','重点'],
+                description: '这是一段文字文字文字文字文字文字文字文字',
+                visible: false
+              }
+
             }, {
               id: 2,
               name: 'Vue',
-              link: 'https://cn.vuejs.org/'
+              link: 'https://cn.vuejs.org/',
+              popover: {
+                tags: ['中文','免费','重点'],
+                visible: false
+              }
             }
           ]
         },
@@ -69,7 +91,7 @@ export default {
           icon: '',
           child: [
             {
-              id: 1,
+              id: 3,
               name: 'iView',
               link: 'hhttp://v1.iviewui.com/'
             }
@@ -79,13 +101,48 @@ export default {
     }
   },
 
+  components: {
+    PopoverContent
+  },
+
+  created () {
+    this.wormhole = this.dataInit(this.wormhole)
+  },
+
   methods: {
+    /**
+     * 数据处理，处理数据结构，保证 child:{popover:{visible: false}}
+     * @param {Object} data - 获取的展示数据
+     * @return {Object} data
+     */
+    dataInit (data) {
+      data.map((current) => {
+        if (current.child.length) {
+          current.child.map((_current) => {
+            if (!_current.popover) {
+              _current.popover = {}
+            }
+            _current.popover.visible = false
+          })
+        }
+      })
+      console.log(data)
+      return data
+    },
     previewStyle () {
       let styleObj = { 'background-color': this.randomColor()}
       return styleObj
     },
     randomColor () {
       return this.colorSet[Math.round(Math.random() * (this.colorSet.length - 1))]
+    },
+    mouseenterEvent (popover) {
+      if (popover.tags || popover.description) {
+        popover.visible = true
+      }
+    },
+    mouseleaveEvent (popover) {
+     popover.visible = false
     }
   }
 }

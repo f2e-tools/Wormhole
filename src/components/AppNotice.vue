@@ -10,7 +10,7 @@ export default {
 .app-notice {
   padding: 5vh 30vw;
   width: 100%;
-  height: 45vh;
+  height: 300px;
   text-align: center;
   background-color: #00a6ac;
   box-sizing: border-box;

@@ -2,14 +2,33 @@
   <div style="background:#f0f2f5;margin-top: -20px;height:100%;">
     <div class="wscn-http404">
       <div class="pic-404">
-        <img class="pic-404__parent" :src="img_404" alt="404">
-        <img class="pic-404__child left" :src="img_404_cloud" alt="404">
-        <img class="pic-404__child mid" :src="img_404_cloud" alt="404">
-        <img class="pic-404__child right" :src="img_404_cloud" alt="404">
+        <img
+          class="pic-404__parent"
+          :src="img_404"
+          alt="404"
+        >
+        <img
+          class="pic-404__child left"
+          :src="img_404_cloud"
+          alt="404"
+        >
+        <img
+          class="pic-404__child mid"
+          :src="img_404_cloud"
+          alt="404"
+        >
+        <img
+          class="pic-404__child right"
+          :src="img_404_cloud"
+          alt="404"
+        >
       </div>
       <div class="exception">
         <div class="exception__headline">抱歉，你访问的页面不存在</div>
-        <a href="/" class="exception__return-home">返回首页</a>
+        <a
+          href="/Wormhole"
+          class="exception__return-home"
+        >返回首页</a>
       </div>
     </div>
   </div>
@@ -37,6 +56,7 @@ export default {
   position: relative;
   margin: 20px auto 60px;
   padding: 0 100px;
+  height: 100vh;
   overflow: hidden;
   .pic-404 {
     position: relative;

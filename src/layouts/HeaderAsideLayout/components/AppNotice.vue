@@ -2,9 +2,15 @@
   <div class="app-notice">
     <div class="notice__content">
       <div class="notice__content--left">
-        <h1>Wormhole</h1>
-        <p>打造你自己的工具库</p>
-        <p>高效查阅，快乐coding</p>
+        <h1>{{notice.name}}</h1>
+        <p>{{notice.p1}}</p>
+        <p>{{notice.p2}}</p>
+        <div
+          class="notice__content--github"
+          @click="linkToGithub"
+        >
+          <span class="btn">{{notice.git}}</span>
+        </div>
       </div>
       <div class="notice__content--right">
         <site-lottie />
@@ -16,8 +22,24 @@
 import { SiteLottie } from '../../../components'
 export default {
   name: 'appNotice',
+  data () {
+    return {
+      notice: {
+        name: 'Wormhole',
+        p1: '打造你自己的工具库',
+        p2: '高效查阅，快乐coding',
+        git: 'GitHub',
+        link: 'https://github.com/AllenChinese/Wormhole'
+      }
+    }
+  },
   components: {
     SiteLottie
+  },
+  methods: {
+    linkToGithub () {
+      window.location.href = this.notice.link
+    }
   }
 }
 </script>
@@ -46,13 +68,40 @@ export default {
     padding: 0 50px;
     color: #fff;
     h1 {
-      margin: 60px 0 30px;
+      margin: 40px 0 30px;
       text-align: left;
       font-size: 42px;
       font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
     }
     p {
       text-align: left;
+    }
+  }
+  &--github {
+    display: flex;
+    .btn {
+      position: relative;
+      display: inline-block;
+      padding-left: 24px;
+      border-radius: 12px;
+      width: 76px;
+      height: 24px;
+      line-height: 24px;
+      font-size: 12px;
+      color: #515151;
+      background-color: #fff;
+      cursor: pointer;
+      &::before {
+        content: " ";
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translate3d(0, -50%, 0);
+        width: 16px;
+        height: 16px;
+        background: url("~@/assets/github.png") no-repeat center center;
+        background-size: contain;
+      }
     }
   }
 }

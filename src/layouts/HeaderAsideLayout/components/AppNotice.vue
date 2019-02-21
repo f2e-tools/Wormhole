@@ -7,14 +7,18 @@
         <p>高效查阅，快乐coding</p>
       </div>
       <div class="notice__content--right">
-
+        <site-lottie />
       </div>
     </div>
   </div>
 </template>
 <script>
+import { SiteLottie } from '../../../components'
 export default {
-  name: 'appNotice'
+  name: 'appNotice',
+  components: {
+    SiteLottie
+  }
 }
 </script>
 <style lang="scss" scoped>
@@ -44,7 +48,7 @@ export default {
     h1 {
       margin: 60px 0 30px;
       text-align: left;
-      font-size: 38px;
+      font-size: 42px;
       font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
     }
     p {

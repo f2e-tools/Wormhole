@@ -1,14 +1,15 @@
 <template>
   <div
-    class="app-loading"
-    ref="appLoading"
-  ></div>
+    class="site-lottie"
+    ref="siteLottie"
+  >
+  </div>
 </template>
 <script>
 import Lottie from 'lottie-web'
-import {default as AppLoadingData}  from '../../data/lottie/app-loading.json'
+import {default as SiteData} from '../data/lottie/site.json'
 export default {
-  name: 'appLoading',
+  name: 'siteLottie',
   data () {
     return {
       options: {
@@ -19,23 +20,22 @@ export default {
     }
   },
   methods: {
-    initAppLoading () {
+    initSite () {
       Lottie.loadAnimation({
-        container: this.$refs.appLoading,
+        container: this.$refs.siteLottie,
         ...this.options,
-        animationData: AppLoadingData
+        animationData: SiteData
       })
     }
   },
+
   mounted () {
-    this.initAppLoading()
+    this.initSite()
   }
 }
 </script>
 <style lang="scss" scoped>
-.app-loading {
-  width: 300px;
-  height: auto;
+.site-lottie {
+  height: 100%;
 }
 </style>
-

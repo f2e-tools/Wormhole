@@ -15,7 +15,7 @@
 </template>
 <script>
 import { AppMain, NavBar, AppNotice } from './components'
-import { AppLoading} from '../../components'
+import { AppLoading } from '../../components'
 export default {
   name: 'Layout',
   data () {

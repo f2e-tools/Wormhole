@@ -21,6 +21,8 @@
     "@vue/cli-plugin-eslint": "^3.4.0",
     "@vue/cli-service": "^3.4.0",
     "babel-eslint": "^10.0.1",
+    "babel-plugin-component": "^1.1.1",
+    "babel-preset-env": "^1.7.0",
     "css-loader": "^2.1.0",
     "eslint": "^5.13.0",
     "eslint-plugin-vue": "^5.0.0",

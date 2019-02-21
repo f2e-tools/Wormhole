@@ -3,9 +3,11 @@
 import HeaderAsideLayout from './layouts/HeaderAsideLayout'
 import EmptyLayout from './layouts/EmptyLayout'
 // 页面
-import Main from './views/Main'
+// import Main from './views/Main'
+const Main = () => import(/* webpackChunkName: "Main" */'./views/Main')
 // 404
-import NotFound from './views/NotFound'
+// import NotFound from './views/NotFound'
+const NotFound = () => import(/* webpackChunkName: "NotFound" */'./views/NotFound')
 const routeConfig = [
   {
     path: '/',

@@ -10,11 +10,12 @@
       <nav-bar />
       <app-notice />
       <app-main />
+      <app-footer />
     </div>
   </div>
 </template>
 <script>
-import { AppMain, NavBar, AppNotice } from './components'
+import { AppMain, NavBar, AppNotice, AppFooter } from './components'
 import { AppLoading } from '../../components'
 export default {
   name: 'Layout',
@@ -27,7 +28,8 @@ export default {
     AppMain,
     NavBar,
     AppNotice,
-    AppLoading
+    AppLoading,
+    AppFooter
   },
   mounted () {
     setTimeout(() => {

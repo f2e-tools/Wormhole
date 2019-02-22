@@ -15,7 +15,8 @@ export default {
 </script>
 <style lang="scss" scoped>
 .app-main {
-  min-height: calc(100vh - 64px);
+  // min-height: calc(100vh - 64px);
+  padding-bottom: 150px;
   background: url("~@/assets/star-bg.svg") no-repeat 0 0;
   background-color: #f0f2f5;
   background-size: cover;

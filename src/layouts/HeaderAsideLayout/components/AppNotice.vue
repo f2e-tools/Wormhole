@@ -75,6 +75,7 @@ export default {
     }
     p {
       text-align: left;
+      letter-spacing: 1px;
     }
   }
   &--github {

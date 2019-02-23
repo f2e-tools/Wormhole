@@ -27,6 +27,7 @@
               @mouseleave="mouseleaveEvent(linkItem.popover)"
               class="link__item--content"
               :href="linkItem.link"
+              target="_blank"
             >
               <div
                 class="link__item--preview"
@@ -107,6 +108,9 @@ export default {
   box-sizing: border-box;
   color: #555;
   background-color: rgba(255, 255, 255, 0.3);
+  @media (max-width: 1300px) {
+    width: 1000px;
+  }
 }
 .pannel__item {
   display: flex;

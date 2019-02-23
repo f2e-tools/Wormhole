@@ -33,12 +33,12 @@
             slot="dropdown"
             class="user-dropdown"
           >
-            <router-link to="/">
+            <a
+              href="https://github.com/AllenChinese"
+              target="_blank"
+            >
               <el-dropdown-item>我的主页</el-dropdown-item>
-            </router-link>
-            <router-link to="/">
-              <el-dropdown-item>个人设置</el-dropdown-item>
-            </router-link>
+            </a>
           </el-dropdown-menu>
         </el-dropdown>
       </div>

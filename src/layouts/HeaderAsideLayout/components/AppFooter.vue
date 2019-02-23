@@ -12,7 +12,10 @@
             <p
               class="links__part--single--name"
               v-for="(link, index) in item.links"
-            ><a :href="link.url">{{link.name}}</a></p>
+            ><a
+                :href="link.url"
+                target="_blank"
+              >{{link.name}}</a></p>
           </div>
         </div>
       </div>
@@ -68,6 +71,9 @@ export default {
   margin: 0 auto;
   width: 1200px;
   height: 100%;
+  @media (max-width: 1300px) {
+    width: 1000px;
+  }
 }
 .links__part {
   display: flex;

@@ -38,7 +38,7 @@ export default {
   },
   methods: {
     linkToGithub () {
-      window.location.href = this.notice.link
+      window.open(this.notice.link, '_blank')
     }
   }
 }

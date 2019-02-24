@@ -6,8 +6,16 @@
     >
       <app-loading />
     </div>
+    <div
+      class="main-Search"
+      v-if="isSearch"
+      @click.stop="searchClose"
+      @searchOpen="searchOpen"
+    >
+      <google-search />
+    </div>
     <div class="main-container">
-      <nav-bar />
+      <nav-bar @searchOpen="searchOpen" />
       <app-notice />
       <app-main />
       <app-footer />
@@ -16,12 +24,13 @@
 </template>
 <script>
 import { AppMain, NavBar, AppNotice, AppFooter } from './components'
-import { AppLoading } from '../../components'
+import { AppLoading, GoogleSearch } from '../../components'
 export default {
   name: 'Layout',
   data () {
     return {
-      isLoading: true
+      isLoading: true,
+      isSearch: false
     }
   },
   components: {
@@ -29,12 +38,21 @@ export default {
     NavBar,
     AppNotice,
     AppLoading,
-    AppFooter
+    AppFooter,
+    GoogleSearch
   },
   mounted () {
     setTimeout(() => {
       this.isLoading = false
     }, 2000)
+  },
+  methods: {
+    searchClose () {
+      this.isSearch = false
+    },
+    searchOpen () {
+      this.isSearch = true
+    }
   }
 }
 </script>

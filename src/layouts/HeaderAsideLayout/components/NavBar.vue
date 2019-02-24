@@ -10,7 +10,10 @@
       <div class="user-profile-content">
         <div class="menu-icons">
           <span class="menu-icon">
-            <i class="el-icon-search icon" />
+            <i
+              class="el-icon-search icon"
+              @click="searchOpenEmit"
+            />
           </span>
           <span class="menu-icon">
             <el-badge
@@ -45,14 +48,16 @@
     </div>
   </el-menu>
 </template>
-
 <script>
-
 export default {
-  name: 'NavBar'
+  name: 'NavBar',
+  methods: {
+    searchOpenEmit () {
+      this.$emit('searchOpen')
+    }
+  }
 };
 </script>
-
 <style lang="scss" scoped>
 .navbar {
   position: relative;

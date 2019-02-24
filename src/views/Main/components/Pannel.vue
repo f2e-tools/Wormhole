@@ -122,6 +122,7 @@ export default {
   &--title {
     flex-shrink: 0;
     margin: 0 15px 0 0;
+    min-width: 100px;
     font-size: 16px;
   }
   &--links {

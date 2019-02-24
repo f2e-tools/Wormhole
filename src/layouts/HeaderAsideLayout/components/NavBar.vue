@@ -15,14 +15,28 @@
               @click="searchOpenEmit"
             />
           </span>
-          <span class="menu-icon">
-            <el-badge
-              is-dot
-              class="item"
+          <el-popover
+            placement="bottom-start"
+            width="450"
+            trigger="hover"
+          >
+            <div
+              class="popover--website"
+              v-html="popoverWebsite"
             >
-              <i class="el-icon-bell icon" />
-            </el-badge>
-          </span>
+            </div>
+            <span
+              slot="reference"
+              class="menu-icon"
+            >
+              <el-badge
+                is-dot
+                class="item"
+              >
+                <i class="el-icon-bell icon" />
+              </el-badge>
+            </span>
+          </el-popover>
         </div>
         <el-dropdown>
           <div class="user-profile-body">
@@ -51,6 +65,11 @@
 <script>
 export default {
   name: 'NavBar',
+  data () {
+    return {
+      popoverWebsite: '<p><b>Wormhole</b> 中整理了常用网站的快速链接入口，用两个层级来区分排版。其实，其中的链接多数是前端的工具和资料，如果你是一位后端开发，你也可以通过拉取我的项目，替换 data 文件中的数据，重新发布成 GitPage，就能打造你自己的工具库网站了。项目还提供 <b><i>`npm run d`</i></b> 一条命令行发布。希望能帮你提升效率 😊！ </p>'
+    }
+  },
   methods: {
     searchOpenEmit () {
       this.$emit('searchOpen')
@@ -123,6 +142,9 @@ export default {
       font-size: 12px;
     }
   }
+}
+.popover--website {
+  letter-spacing: 2px;
 }
 </style>
 

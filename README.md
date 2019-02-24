@@ -1,7 +1,7 @@
 # Wormhole
 f2e tools and sort out some website quick links
 
-<p style="text-align:center"><img src="./src/assets/plant.png"></p>
+<div align=center><img src="./src/assets/plant.png"></div>
 
 ## Wiki
 wormhole（虫洞），又名“Einstein —— Rosen Bridge”，是宇宙中可能存在的连接两个不同时空的狭窄隧道。

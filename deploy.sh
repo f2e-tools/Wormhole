@@ -12,7 +12,7 @@ npm run build
 cd dist
 
 #如果是自定义域名 指定解析值
-# echo "" > CNAME
+echo "51wormhole.club" > CNAME
 
 git init
 git add -A

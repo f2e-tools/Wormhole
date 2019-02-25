@@ -5,5 +5,5 @@ module.exports = {
       extensions: ['.js', '.json', '.vue'],
     },
   },
-  publicPath: '/Wormhole'
+  publicPath: '/'
 }

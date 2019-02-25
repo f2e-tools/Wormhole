@@ -6,6 +6,11 @@
       v:key="item.id"
     >
       <div class="pannel__item--title">
+        <img
+          :style="iconStyle"
+          :src="item.icon"
+          :alt="item.name"
+        >
         <span>{{item.name}}</span>
       </div>
       <div class="pannel__item--links">
@@ -49,7 +54,12 @@ export default {
   name: 'pannel',
   data () {
     return {
-      wormhole: []
+      wormhole: [],
+      iconStyle: {
+        marginRight: '8px',
+        width: '18px',
+        height: '18px'
+      }
     }
   },
 
@@ -120,10 +130,13 @@ export default {
     border-bottom: 1px solid #eee;
   }
   &--title {
+    display: flex;
+    align-items: center;
     flex-shrink: 0;
     margin: 0 15px 0 0;
-    min-width: 100px;
-    font-size: 16px;
+    min-width: 110px;
+    font-size: 15px;
+    font-family: Georgia, "Times New Roman", Times, serif;
   }
   &--links {
     display: flex;

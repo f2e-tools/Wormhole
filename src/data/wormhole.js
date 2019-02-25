@@ -3,7 +3,7 @@ export const wormhole = [
   {
     id: 1,
     name: 'VueJS',
-    icon: '',
+    icon: require('../assets/icon/vuejs.png'),
     child: [
       {
         id: 1,
@@ -57,7 +57,7 @@ export const wormhole = [
   {
     id: 2,
     name: 'React',
-    icon: '',
+    icon: require('../assets/icon/react.png'),
     child: [
       {
         id: 1,
@@ -82,7 +82,7 @@ export const wormhole = [
   {
     id: 3,
     name: 'NodeJS',
-    icon: '',
+    icon: require('../assets/icon/Nodejs.png'),
     child: [
       {
         id: 1,
@@ -103,7 +103,7 @@ export const wormhole = [
   {
     id: 4,
     name: 'UI 框架',
-    icon: '',
+    icon: require('../assets/icon/ui.png'),
     child: [
       {
         id: 1,
@@ -159,7 +159,7 @@ export const wormhole = [
   {
     id: 5,
     name: 'UI 设计师',
-    icon: '',
+    icon: require('../assets/icon/designer.png'),
     child: [
       {
         id: 1,
@@ -200,7 +200,7 @@ export const wormhole = [
   {
     id: 6,
     name: '产品经理',
-    icon: '',
+    icon: require('../assets/icon/PM.png'),
     child: [
       {
         id: 1,
@@ -229,7 +229,7 @@ export const wormhole = [
   {
     id: 7,
     name: '知识整理',
-    icon: '',
+    icon: require('../assets/icon/zhishi.png'),
     child: [
       {
         id: 1,
@@ -272,7 +272,7 @@ export const wormhole = [
   {
     id: 8,
     name: '在线工具库',
-    icon: '',
+    icon: require('../assets/icon/tool.png'),
     child: [
       {
         id: 1,
@@ -324,7 +324,7 @@ export const wormhole = [
   {
     id: 9,
     name: '优秀站点',
-    icon: '',
+    icon: require('../assets/icon/Web.png'),
     child: [
       {
         id: 1,
@@ -373,7 +373,7 @@ export const wormhole = [
   {
     id: 10,
     name: '刷题网站',
-    icon: '',
+    icon: require('../assets/icon/question.png'),
     child: [
       {
         id: 1,

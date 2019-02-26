@@ -17,7 +17,7 @@
         <div
           class="link__item"
           v-for="(linkItem, index) in item.child || []"
-          v:key="linkItem.id"
+          :key="linkItem.id"
         >
           <el-popover
             placement="bottom-start"

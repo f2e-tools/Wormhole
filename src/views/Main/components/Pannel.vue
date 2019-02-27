@@ -31,6 +31,7 @@
               @mouseenter="mouseenterEvent(linkItem.popover)"
               @mouseleave="mouseleaveEvent(linkItem.popover)"
               class="link__item--content"
+              :class="{active: linkItem.active}"
               :href="linkItem.link"
               target="_blank"
             >
@@ -48,8 +49,8 @@
 </template>
 <script>
 import { PopoverContent } from '../../../components'
-import { colorSet } from '../../../data/colorSet'
-import { wormhole } from '../../../data/wormhole'
+import { colorSet } from '../../../data'
+import { wormhole } from '../../../data'
 export default {
   name: 'pannel',
   data () {
@@ -68,6 +69,7 @@ export default {
   },
 
   created () {
+    console.log(colorSet)
     this.wormhole = this.dataInit(wormhole)
   },
 
@@ -143,14 +145,20 @@ export default {
     flex-wrap: wrap;
     align-items: center;
     .link__item {
+      margin: 3px 0;
       padding-right: 10px;
       &--content {
         display: flex;
         align-items: center;
         margin-right: 8px;
         padding: 8px;
+        border-radius: 20px;
         width: 160px;
         font-size: 14px;
+        &.active {
+          border: 1px solid #eee;
+          background-color: #e5f0f7;
+        }
       }
       &--preview {
         flex-shrink: 0;

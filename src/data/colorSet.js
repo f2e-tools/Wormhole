@@ -1,4 +1,4 @@
-export const colorSet = [
+const colorSet = [
   '#00a6ac',
   '#f15a22',
   '#009ad6',
@@ -10,3 +10,4 @@ export const colorSet = [
   '#130c0e',
   '#444693'
 ]
+export default colorSet

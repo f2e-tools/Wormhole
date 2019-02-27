@@ -37,9 +37,9 @@ export default {
         {
           title: '友情链接',
           links: [
-            {name: 'Hilox', url: ''},
-            {name: '前端乱炖', url: 'http://html-js.com/'},
-            {name: '张鑫旭', url: 'https://www.zhangxinxu.com/'}
+            {name: 'Hilox', url: 'https://github.com/zhaohaihao'},
+            {name: 'aimingoo', url: 'https://aimingoo.github.io/'},
+            {name: '芋头', url: 'http://html-js.com/card/29'}
           ]
         },
         {

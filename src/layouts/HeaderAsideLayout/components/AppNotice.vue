@@ -66,20 +66,23 @@ export default {
   }
   &--left {
     padding: 0 50px;
+    font-family: "lucida grande", "lucida sans unicode", lucida, helvetica,
+      "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
     color: #fff;
     h1 {
       margin: 40px 0 30px;
       text-align: left;
       font-size: 42px;
-      font-family: "Arial", "Microsoft YaHei", "黑体", "宋体", sans-serif;
     }
     p {
+      line-height: 15px;
       text-align: left;
       letter-spacing: 1px;
     }
   }
   &--github {
     display: flex;
+    margin-top: 20px;
     .btn {
       position: relative;
       display: inline-block;

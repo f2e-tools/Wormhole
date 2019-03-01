@@ -38,7 +38,7 @@ const vue = [{
       link: 'http://hcysun.me/vue-design/art/',
       active: true,
       popover: {
-        tags: ['国际化', 'Vue', '中文'],
+        tags: ['Vue', '中文'],
         description: '很用心的 Vue 中文教程，版本可能有点出入。',
         visible: false
       }

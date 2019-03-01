@@ -10,16 +10,12 @@ const tools = [{
       link: 'https://tinypng.com/',
       active: true,
       popover: {
-        tags: ['免费']
+        tags: ['图片压缩', '免费']
       }
     }, {
       id: 2,
       name: 'uTools',
       link: 'https://u.tools/'
-    }, {
-      id: 3,
-      name: '幕布',
-      link: 'ttps://mubu.com/list'
     }, {
       id: 4,
       name: 'carbon',
@@ -40,10 +36,11 @@ const tools = [{
       id: 8,
       name: '图片转 Base64',
       link: 'http://imgbase64.duoshitong.com/'
-    }, {
+    },
+    {
       id: 9,
-      name: 'LastPass|密码管理',
-      link: 'https://www.lastpass.com/zh'
+      name: 'cdnjs',
+      link: 'https://cdnjs.com/'
     }, {
       id: 10,
       name: '免费 CDN 加速服务',

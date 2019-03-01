@@ -13,6 +13,10 @@ wormhole（虫洞），又名"Einstein —— Rosen Bridge"，是宇宙中可能
 
 希望能帮你提升效率 😊！ </p>
 
+## Demo
+
+<div align=center><img src="./src/assets/wormholeScreenShot.png"></div>
+
 ## Hope you know
  - 「快速链接」的内容尽量保持（一周一更）的频率持续更新。
  - 给我些建议吧（关于内容 & 交互），可以提在 issues 里 & 微信中告诉我，或者 PR。

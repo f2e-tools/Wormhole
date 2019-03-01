@@ -69,7 +69,6 @@ export default {
   },
 
   created () {
-    console.log(colorSet)
     this.wormhole = this.dataInit(wormhole)
   },
 

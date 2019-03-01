@@ -18,13 +18,14 @@
       <nav-bar @searchOpen="searchOpen" />
       <app-notice />
       <app-main />
+      <back-top />
       <app-footer />
     </div>
   </div>
 </template>
 <script>
 import { AppMain, NavBar, AppNotice, AppFooter } from './components'
-import { AppLoading, GoogleSearch } from '../../components'
+import { AppLoading, GoogleSearch, BackTop } from '../../components'
 export default {
   name: 'Layout',
   data () {
@@ -39,7 +40,8 @@ export default {
     AppNotice,
     AppLoading,
     AppFooter,
-    GoogleSearch
+    GoogleSearch,
+    BackTop
   },
   mounted () {
     setTimeout(() => {

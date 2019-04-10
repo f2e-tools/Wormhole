@@ -65,14 +65,15 @@
 <script>
 export default {
   name: 'NavBar',
-  data () {
+  data() {
     return {
-      popoverWebsite: '<p><b>Wormhole</b> 中整理了常用网站的快速链接入口，用两个层级来区分排版。其实，其中的链接多数是前端的工具和资料，如果你是一位后端开发，你也可以通过拉取我的项目，替换 data 文件中的数据，重新发布成 GitPage，就能打造你自己的工具库网站了。项目还提供 <b><i>`npm run d`</i></b> 一条命令行发布。希望能帮你提升效率 😊！ </p>'
-    }
+      popoverWebsite:
+        '<p><b>Wormhole</b> 中整理了常用网站的快速链接入口，用两个层级来区分排版。其实，其中的链接多数是前端的工具和资料，如果你是一位后端开发，你也可以通过拉取我的项目，替换 data 文件中的数据，重新发布成 GitPage，就能打造你自己的工具库网站了。项目还提供 <b><i>`npm run d`</i></b> 一条命令行发布。希望能帮你提升效率 😊！ </p>'
+    };
   },
   methods: {
-    searchOpenEmit () {
-      this.$emit('searchOpen')
+    searchOpenEmit() {
+      this.$emit('searchOpen');
     }
   }
 };
@@ -83,7 +84,7 @@ export default {
   height: 64px;
   box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
   &::before {
-    content: "Wormhole";
+    content: 'Black Hole'; // Wormhole
     position: absolute;
     width: 100%;
     height: 64px;

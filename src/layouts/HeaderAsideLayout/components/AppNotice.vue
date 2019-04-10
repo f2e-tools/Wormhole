@@ -19,29 +19,29 @@
   </div>
 </template>
 <script>
-import { SiteLottie } from '../../../components'
+import { SiteLottie } from '../../../components';
 export default {
   name: 'appNotice',
-  data () {
+  data() {
     return {
       notice: {
-        name: 'Wormhole',
+        name: 'Black Hole', //Wormhole
         p1: '打造你自己的工具库',
         p2: '高效查阅，快乐coding',
         git: 'GitHub',
         link: 'https://github.com/AllenChinese/Wormhole'
       }
-    }
+    };
   },
   components: {
     SiteLottie
   },
   methods: {
-    linkToGithub () {
-      window.open(this.notice.link, '_blank')
+    linkToGithub() {
+      window.open(this.notice.link, '_blank');
     }
   }
-}
+};
 </script>
 <style lang="scss" scoped>
 .app-notice {
@@ -66,8 +66,8 @@ export default {
   }
   &--left {
     padding: 0 50px;
-    font-family: "lucida grande", "lucida sans unicode", lucida, helvetica,
-      "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
+    font-family: 'lucida grande', 'lucida sans unicode', lucida, helvetica,
+      'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
     color: #fff;
     h1 {
       margin: 40px 0 30px;
@@ -96,14 +96,14 @@ export default {
       background-color: #fff;
       cursor: pointer;
       &::before {
-        content: " ";
+        content: ' ';
         position: absolute;
         top: 50%;
         left: 10px;
         transform: translate3d(0, -50%, 0);
         width: 16px;
         height: 16px;
-        background: url("~@/assets/github.png") no-repeat center center;
+        background: url('~@/assets/github.png') no-repeat center center;
         background-size: contain;
       }
     }

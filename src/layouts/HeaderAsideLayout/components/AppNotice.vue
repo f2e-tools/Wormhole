@@ -25,7 +25,7 @@ export default {
   data() {
     return {
       notice: {
-        name: 'Black Hole', //Wormhole
+        name: 'Wormhole',
         p1: '打造你自己的工具库',
         p2: '高效查阅，快乐coding',
         git: 'GitHub',

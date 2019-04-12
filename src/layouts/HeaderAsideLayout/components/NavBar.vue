@@ -84,7 +84,7 @@ export default {
   height: 64px;
   box-shadow: 0 1px 4px rgba(0, 21, 41, 0.08);
   &::before {
-    content: 'Black Hole'; // Wormhole
+    content: 'Wormhole';
     position: absolute;
     width: 100%;
     height: 64px;

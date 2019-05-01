@@ -39,7 +39,10 @@
                 class="link__item--preview"
                 :style="previewStyle()"
               >{{linkItem.name.slice(0,1).toLocaleUpperCase() || 'W'}}</div>
-              <div class="link__item--title">{{linkItem.name}}</div>
+              <div
+                class="link__item--title"
+                :title="linkItem.name"
+              >{{linkItem.name}}</div>
             </a>
           </el-popover>
         </div>
@@ -53,7 +56,7 @@ import { colorSet } from '../../../data'
 import { wormhole } from '../../../data'
 export default {
   name: 'pannel',
-  data () {
+  data() {
     return {
       wormhole: [],
       iconStyle: {
@@ -68,7 +71,7 @@ export default {
     PopoverContent
   },
 
-  created () {
+  created() {
     this.wormhole = this.dataInit(wormhole)
   },
 
@@ -78,10 +81,10 @@ export default {
      * @param {Object} data - 获取的展示数据
      * @return {Object} data
      */
-    dataInit (data) {
-      data.map((ele) => {
+    dataInit(data) {
+      data.map(ele => {
         if (ele.child.length) {
-          ele.child.map((_ele) => {
+          ele.child.map(_ele => {
             if (!_ele.popover) {
               _ele.popover = {}
             }
@@ -91,20 +94,20 @@ export default {
       })
       return data
     },
-    previewStyle () {
-      let styleObj = { 'background-color': this.randomColor()}
+    previewStyle() {
+      let styleObj = { 'background-color': this.randomColor() }
       return styleObj
     },
-    randomColor () {
+    randomColor() {
       return colorSet[Math.round(Math.random() * (colorSet.length - 1))]
     },
-    mouseenterEvent (popover) {
+    mouseenterEvent(popover) {
       if (popover.tags || popover.description) {
         popover.visible = true
       }
     },
-    mouseleaveEvent (popover) {
-     popover.visible = false
+    mouseleaveEvent(popover) {
+      popover.visible = false
     }
   }
 }
@@ -137,7 +140,7 @@ export default {
     margin: 0 15px 0 0;
     min-width: 110px;
     font-size: 15px;
-    font-family: Georgia, "Times New Roman", Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
   &--links {
     display: flex;

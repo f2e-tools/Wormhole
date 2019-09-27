@@ -1,5 +1,12 @@
 # Wormhole
+
 f2e tools and sort out some website quick links
+
+![github forks](https://img.shields.io/github/forks/f2e-tools/Wormhole?style=social)
+![github stars](https://img.shields.io/github/stars/f2e-tools/Wormhole?style=social)
+![github watchers](https://img.shields.io/github/watchers/f2e-tools/Wormhole?style=social)
+![github license](https://img.shields.io/github/license/f2e-tools/Wormhole)
+
 
 <div align=center><img src="./src/assets/plant.png"></div>
 
@@ -13,7 +20,7 @@ wormhole（虫洞），又名"Einstein —— Rosen Bridge"，是宇宙中可能
 
 希望能帮你提升效率 😊！ </p>
 
-## Demo
+## Demo snapshot
 
 <div align=center><img src="./src/assets/wormholeScreenShot.png"></div>
 
@@ -22,16 +29,11 @@ wormhole（虫洞），又名"Einstein —— Rosen Bridge"，是宇宙中可能
  - 给我些建议吧（关于内容 & 交互），可以提在 issues 里 & 微信中告诉我，或者 PR。
 
 ## RandomColor
- - 浅葱色 #00a6ac
- - 赤橙 #f15a22
- - 青 #009ad6
- - 蓝色 #145b7d
- - 山鸠色 #525f42
- - 亜麻色 #b69968
- - 青緑 #00ae9d
- - 牡丹色 #ea66a6
- - 黒 #130c0e
- - 绀桔梗 #444693
+
+|  浅葱色 | 赤橙 | 青 | 蓝色 | 山鸠色 | 亜麻色 | 青緑 | 牡丹色 | 黒 | 绀桔梗 |
+|  ----  | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| #00a6ac |#f15a22|#009ad6|#145b7d|#525f42|#b69968|#00ae9d|#ea66a6|#130c0e|#444693|
+
 
 ## Project setup
 

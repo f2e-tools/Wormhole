@@ -16,12 +16,32 @@
         <site-lottie />
       </div>
     </div>
+    <div
+      class="show-nav-bar"
+      @click="showNavBarToggle"
+    >
+
+      <img
+        src="~@/assets/jiantou-_1.png"
+        v-if="!navBarVisible"
+      />
+      <img
+        src="~@/assets/jiantou-.png"
+        v-else
+      >
+    </div>
   </div>
 </template>
 <script>
-import { SiteLottie } from '../../../components';
+import { SiteLottie } from '../../../components'
 export default {
   name: 'appNotice',
+  props: {
+    navBarVisible: {
+      type: Boolean,
+      default: false
+    }
+  },
   data() {
     return {
       notice: {
@@ -31,20 +51,25 @@ export default {
         git: 'GitHub',
         link: 'https://github.com/AllenChinese/Wormhole'
       }
-    };
+    }
   },
   components: {
     SiteLottie
   },
   methods: {
     linkToGithub() {
-      window.open(this.notice.link, '_blank');
+      window.open(this.notice.link, '_blank')
+    },
+
+    showNavBarToggle() {
+      this.$emit('show-nav-bar')
     }
   }
-};
+}
 </script>
 <style lang="scss" scoped>
 .app-notice {
+  position: relative;
   padding: 3vh;
   width: 100%;
   height: 300px;
@@ -66,8 +91,8 @@ export default {
   }
   &--left {
     padding: 0 50px;
-    font-family: 'lucida grande', 'lucida sans unicode', lucida, helvetica,
-      'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+    font-family: 'lucida grande', 'lucida sans unicode', lucida, helvetica, 'Hiragino Sans GB',
+      'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
     color: #fff;
     h1 {
       margin: 40px 0 30px;
@@ -107,6 +132,31 @@ export default {
         background-size: contain;
       }
     }
+  }
+}
+
+.show-nav-bar {
+  position: absolute;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 20px;
+  height: 20px;
+  animation: iconFloat 0.8s ease-in-out infinite alternate-reverse;
+  cursor: pointer;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@keyframes iconFloat {
+  0% {
+    top: 15px;
+  }
+
+  100% {
+    top: 25px;
   }
 }
 </style>

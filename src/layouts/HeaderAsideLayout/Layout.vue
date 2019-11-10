@@ -15,8 +15,16 @@
       <google-search />
     </div>
     <div class="main-container">
-      <nav-bar @searchOpen="searchOpen" />
-      <app-notice />
+      <transition name="fade">
+        <nav-bar
+          v-if="navBarVisible"
+          @searchOpen="searchOpen"
+        />
+      </transition>
+      <app-notice
+        :navBarVisible="navBarVisible"
+        @show-nav-bar="navBarVisible = !navBarVisible"
+      />
       <app-main />
       <back-top />
       <app-footer />
@@ -28,10 +36,11 @@ import { AppMain, NavBar, AppNotice, AppFooter } from './components'
 import { AppLoading, GoogleSearch, BackTop } from '../../components'
 export default {
   name: 'Layout',
-  data () {
+  data() {
     return {
       isLoading: true,
-      isSearch: false
+      isSearch: false,
+      navBarVisible: false
     }
   },
   components: {
@@ -43,16 +52,16 @@ export default {
     GoogleSearch,
     BackTop
   },
-  mounted () {
+  mounted() {
     setTimeout(() => {
       this.isLoading = false
     }, 2000)
   },
   methods: {
-    searchClose () {
+    searchClose() {
       this.isSearch = false
     },
-    searchOpen () {
+    searchOpen() {
       this.isSearch = true
     }
   }
@@ -64,7 +73,7 @@ export default {
   height: 100%;
   width: 100%;
   &:after {
-    content: "";
+    content: '';
     display: table;
     clear: both;
   }

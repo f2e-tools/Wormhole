@@ -12,13 +12,14 @@ npm run build
 cd dist
 
 #如果是自定义域名 指定解析值
-echo "51wormhole.club" > CNAME
+# echo "51wormhole.club" > CNAME
 
 git init
 git add -A
 git commit -m "deploy-$time"
 
 # 如果发布到 https://<USERNAME>.github.io/<REPO>
-git push -f git@github.com:allenchinese/Wormhole.git master:gh-pages
+# git push -f git@github.com:allenchinese/Wormhole.git master:gh-pages
+git push -f git@github.com:f2e-tools/Wormhole.git master:gh-pages
 
 cd -
